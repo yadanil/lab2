@@ -7,13 +7,13 @@ class Point {
     private double x;
     private double y;
 
-    // Конструктор для инициализации координат
+    //Конструктор для инициализации координат
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    // Геттеры для координат
+    //Геттеры для координат
     public double getX() {
         return x;
     }
@@ -22,7 +22,7 @@ class Point {
         return y;
     }
 
-    // Метод для получения текстового представления точки
+    //Метод для получения текстового представления точки
     public String toString() {
         return String.format("{%f;%f}", x, y);
     }
@@ -33,13 +33,13 @@ class Line {
     private Point start;
     private Point end;
 
-    // Конструктор для инициализации линии
+    //Конструктор для инициализации линии
     public Line(Point start, Point end) {
         this.start = start;
         this.end = end;
     }
 
-    // Конструктор для создания линии с четырьмя числами (x1, y1, x2, y2)
+    //Конструктор для создания линии с четырьмя числами (x1, y1, x2, y2)
     public Line(double x1, double y1, double x2, double y2) {
         this.start = new Point(x1, y1);
         this.end = new Point(x2, y2);
@@ -50,7 +50,7 @@ class Line {
         double dy = end.getY() - start.getY();
         return (int) Math.round(Math.sqrt(dx * dx + dy * dy));
     }
-    // Геттеры для начала и конца линии
+    //Геттеры для начала и конца линии
     public Point getStart() {
         return start;
     }
@@ -59,7 +59,7 @@ class Line {
         return end;
     }
 
-    // Сеттеры для начала и конца линии
+    //Сеттеры для начала и конца линии
     public void setStart(Point start) {
         this.start = start;
     }
@@ -68,7 +68,7 @@ class Line {
         this.end = end;
     }
 
-    // Метод для получения текстового представления линии
+    //Метод для получения текстового представления линии
     @Override
     public String toString() {
         return String.format("Линия от %s до %s", start, end);
@@ -80,23 +80,23 @@ class Student {
     private String name;
     private int[] grades;
 
-    // Конструктор для инициализации имени и оценок
+    //Конструктор для инициализации имени и оценок
     public Student(String name, int[] grades) {
         this.name = name;
         this.grades = grades;
     }
 
-    // Геттер для оценок
+    //Геттер для оценок
     public int[] getGrades() {
         return grades;
     }
 
-    // Сеттер для оценок
+    //Сеттер для оценок
     public void setGrades(int[] grades) {
         this.grades = grades;
     }
 
-    // Метод для получения текстового представления студента
+    //Метод для получения текстового представления студента
     @Override
     public String toString() {
         return String.format("Имя: %s, Оценки: %s", name, Arrays.toString(grades));
